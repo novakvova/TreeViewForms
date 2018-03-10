@@ -19,10 +19,20 @@ namespace Example
             return true;
         }
 
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool EditNode(TreeNode nodeEdit, string textNode)
         {
             nodeEdit.Text=textNode;
             return true;
+        }
+
+        public void LoadTreeView(TreeView treeView)
+        {
+            throw new NotImplementedException();
         }
 
         bool ICategoryExplorer.AddNode(TreeNode parentNode, string textNode)

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tvCategory = new System.Windows.Forms.TreeView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnAddRoot = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAddRoot = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.tvCategory = new System.Windows.Forms.TreeView();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,32 +51,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Категорії";
             // 
-            // tvCategory
+            // btnDelete
             // 
-            this.tvCategory.Location = new System.Drawing.Point(6, 19);
-            this.tvCategory.Name = "tvCategory";
-            this.tvCategory.Size = new System.Drawing.Size(264, 334);
-            this.tvCategory.TabIndex = 0;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(277, 20);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(136, 35);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Додати";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnAddRoot
-            // 
-            this.btnAddRoot.Location = new System.Drawing.Point(277, 61);
-            this.btnAddRoot.Name = "btnAddRoot";
-            this.btnAddRoot.Size = new System.Drawing.Size(136, 35);
-            this.btnAddRoot.TabIndex = 1;
-            this.btnAddRoot.Text = "Додати в корінь";
-            this.btnAddRoot.UseVisualStyleBackColor = true;
-            this.btnAddRoot.Click += new System.EventHandler(this.btnAddRoot_Click);
+            this.btnDelete.Location = new System.Drawing.Point(277, 318);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(136, 35);
+            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Text = "Видалити";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -88,14 +70,32 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnDelete
+            // btnAddRoot
             // 
-            this.btnDelete.Location = new System.Drawing.Point(277, 318);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(136, 35);
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "Видалити";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnAddRoot.Location = new System.Drawing.Point(277, 61);
+            this.btnAddRoot.Name = "btnAddRoot";
+            this.btnAddRoot.Size = new System.Drawing.Size(136, 35);
+            this.btnAddRoot.TabIndex = 1;
+            this.btnAddRoot.Text = "Додати в корінь";
+            this.btnAddRoot.UseVisualStyleBackColor = true;
+            this.btnAddRoot.Click += new System.EventHandler(this.btnAddRoot_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(277, 20);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(136, 35);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Додати";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // tvCategory
+            // 
+            this.tvCategory.Location = new System.Drawing.Point(6, 19);
+            this.tvCategory.Name = "tvCategory";
+            this.tvCategory.Size = new System.Drawing.Size(264, 334);
+            this.tvCategory.TabIndex = 0;
             // 
             // CategoryForm
             // 
@@ -105,6 +105,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CategoryForm";
             this.Text = "Категорії";
+            this.Load += new System.EventHandler(this.CategoryForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

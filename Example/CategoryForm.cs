@@ -15,7 +15,7 @@ namespace Example
         ICategoryExplorer _ce;
         public CategoryForm()
         {
-            _ce = new CategoryExplorer();
+            _ce = new EFCategoryExplorer(); //new CategoryExplorer();
             InitializeComponent();
         }
 
@@ -50,6 +50,11 @@ namespace Example
             {
                 _ce.EditNode(tvCategory.SelectedNode, "EditNode");
             }
+        }
+
+        private void CategoryForm_Load(object sender, EventArgs e)
+        {
+            _ce.LoadTreeView(tvCategory);
         }
     }
 }
