@@ -13,6 +13,8 @@ namespace Example
         bool AddRootCategory(TreeView treeView, string textNode);
         bool AddNode(TreeNode parentNode, string textNode);
         bool EditNode(TreeNode nodeEdit, string textNode);
+        TreeNode GetParentSubNodes(TreeNode parentNode);
+        bool RemoveCategory(TreeView treeView, TreeNode node);
 
 
     }

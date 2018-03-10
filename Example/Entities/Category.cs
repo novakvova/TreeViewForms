@@ -17,6 +17,7 @@ namespace Example.Entities
         public string Name { get; set; }
         [ForeignKey("Parent")]
         public int ? ParentId { get; set; }
-        public Category Parent { get; set; }
+        public virtual Category Parent { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
     }
 }

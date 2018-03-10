@@ -30,7 +30,17 @@ namespace Example
             return true;
         }
 
+        public TreeNode GetParentSubNodes(TreeNode parentNode)
+        {
+            throw new NotImplementedException();
+        }
+
         public void LoadTreeView(TreeView treeView)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RemoveCategory(TreeView treeView, TreeNode node)
         {
             throw new NotImplementedException();
         }

@@ -56,5 +56,28 @@ namespace Example
         {
             _ce.LoadTreeView(tvCategory);
         }
+
+        private void tvCategory_BeforeExpand(object sender, TreeViewCancelEventArgs e)
+        {
+            if(e.Node.Nodes[0].Text=="")
+            {
+                TreeNode node = _ce.GetParentSubNodes(e.Node);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(tvCategory.SelectedNode!=null)
+            {
+                var name = tvCategory.SelectedNode.Text;
+                DialogResult result = MessageBox
+                    .Show(string.Format("Ви дійсно бажаєте видалити '{0}'", name),
+                    "Видалення!", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    _ce.RemoveCategory(tvCategory, tvCategory.SelectedNode);
+                }
+            }
+        }
     }
 }

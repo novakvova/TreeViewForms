@@ -59,6 +59,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Видалити";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -96,6 +97,7 @@
             this.tvCategory.Name = "tvCategory";
             this.tvCategory.Size = new System.Drawing.Size(264, 334);
             this.tvCategory.TabIndex = 0;
+            this.tvCategory.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.tvCategory_BeforeExpand);
             // 
             // CategoryForm
             // 
