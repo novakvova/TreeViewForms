@@ -32,7 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,7 +65,14 @@
     <Compile Include="CreateCategoryForm.Designer.cs">
       <DependentUpon>CreateCategoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\EFContext.cs" />
     <Compile Include="ICategoryExplorer.cs" />
+    <Compile Include="Migrations\201803100931335_Create tabel tblCategories.cs" />
+    <Compile Include="Migrations\201803100931335_Create tabel tblCategories.Designer.cs">
+      <DependentUpon>201803100931335_Create tabel tblCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CategoryForm.resx">
@@ -66,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateCategoryForm.resx">
       <DependentUpon>CreateCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803100931335_Create tabel tblCategories.resx">
+      <DependentUpon>201803100931335_Create tabel tblCategories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +93,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
